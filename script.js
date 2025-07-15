@@ -1,52 +1,12 @@
-// Scroll Reveal Animation
-window.addEventListener('scroll', reveal);
-function reveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-    if (elementTop < windowHeight - revealPoint) {
-      reveals[i].classList.add('active');
-    } else {
-      reveals[i].classList.remove('active');
-    }
-  }
-}
-window.addEventListener('load', reveal);
+// === script.js ===
 
-// Download Resume Alert
-window.addEventListener('DOMContentLoaded', () => {
-  const resumeBtn = document.querySelector('.download-btn');
-  if (resumeBtn) {
-    resumeBtn.addEventListener('click', () => {
-      alert('📄 Your resume is downloading...');
-    });
-  }
-});
+// Rotating Text Logic const words = ["Student", "Web Developer", "Frontend Enthusiast"]; let i = 0; const span = document.getElementById("rotate-text");
 
-// Dark Mode Toggle
-const toggleButton = document.createElement('button');
-toggleButton.classList.add('mode-toggle');
-toggleButton.innerText = '🌙';
-document.querySelector('.navbar').appendChild(toggleButton);
+function rotateText() { span.textContent = words[i]; i = (i + 1) % words.length; } setInterval(rotateText, 2000);
 
-function applyMode(mode) {
-  if (mode === 'dark') {
-    document.body.classList.add('dark-mode');
-    toggleButton.innerText = '☀️';
-  } else {
-    document.body.classList.remove('dark-mode');
-    toggleButton.innerText = '🌙';
-  }
-  localStorage.setItem('theme', mode);
-}
+// Highlight Active Nav Link const sections = document.querySelectorAll("section"); const navLinks = document.querySelectorAll(".nav-links a");
 
-toggleButton.addEventListener('click', () => {
-  const currentMode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-  applyMode(currentMode === 'dark' ? 'light' : 'dark');
-});
+window.addEventListener("scroll", () => { let current = ""; sections.forEach((section) => { const sectionTop = section.offsetTop - 60; if (scrollY >= sectionTop) { current = section.getAttribute("id"); } }); navLinks.forEach((link) => { link.classList.remove("active"); if (link.getAttribute("href").includes(current)) { link.classList.add("active"); } }); });
 
-// Default to dark mode
-const savedTheme = localStorage.getItem('theme') || 'dark';
-applyMode(savedTheme);
+// Resume Button with Download Alert const resumeBtn = document.getElementById("resumeBtn"); resumeBtn.addEventListener("click", () => { alert("Downloading resume..."); });
+
