@@ -1,83 +1,57 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K LOHITH KUMAR - Portfolio</title>
+  <title>K Lohith Kumar - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-</head>
-<body>
-  <header class="navbar">
-    <img src="lk.png" alt="Logo" class="logo" />
-    <nav>
+</head><body>
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="lk.png" alt="Logo" />
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
+      <div class="top-buttons">
+        <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact</button>
+        <button class="toggle-mode" id="modeToggle">🌙</button>
+      </div>
     </nav>
-    <a href="#contact" class="contact-btn">Contact</a>
-  </header>  <section class="hero" id="home">
-    <div class="hero-text">
+  </header>  <!-- Hero Section -->  <section id="home" class="hero">
+    <div class="hero-left">
       <h1>Hello, I'm <span class="highlight">Lohith</span></h1>
-      <p class="rotating-text">
-        <span>Student</span>
-        <span>Web Developer</span>
-        <span>Frontend Enthusiast</span>
-      </p>
+      <h2><span id="rotate-text">Student</span></h2>
+      <p>A Web Developer from Bengaluru</p>
       <div class="hero-buttons">
         <a href="#projects" class="btn">See My Work</a>
-        <a href="K_Lohith_Kumar_Resume.pdf" download class="btn download-btn">Download Resume</a>
+        <a id="resumeBtn" class="btn" href="K_Lohith_Kumar_Resume.pdf" download>📄 Download Resume</a>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="welcome.png" alt="Welcome Image">
+    <div class="hero-right">
+      <img src="welcome.png" alt="Welcome" />
     </div>
-  </section>  <section class="about" id="about">
+  </section>  <!-- About Section -->  <section id="about">
     <h2>About Me</h2>
     <p class="about-text">
-      Hello! I'm K Lohith Kumar, a passionate and curious learner from a computer science background.
-      I have a deep interest in web development and enjoy creating simple, clean, and responsive websites.
-      I’m self-motivated, always eager to explore new technologies, and enjoy solving problems through code.
-      What makes me unique is my consistency and willingness to learn by building real-world projects that improve my understanding.
+      Hello! I'm K Lohith Kumar, a passionate and curious learner from a computer science background. I have a deep interest in web development and enjoy creating simple, clean, and responsive websites. I’m self-motivated, always eager to explore new technologies, and enjoy solving problems through code. What makes me unique is my consistency and willingness to learn by building real-world projects that improve my understanding.
     </p>
-  </section>  <section class="skills" id="skills">
+  </section>  <!-- Skills Section -->  <section id="skills">
     <h2>Skills</h2>
     <p class="skills-intro">
       As a creative and detail-oriented web developer, I specialize in building responsive websites using HTML, CSS, JavaScript, and React. My focus is on performance, design, and usability.
     </p>
-    <div class="skills-cards">
-      <div class="skill-card">
-        <img src="HTML.png" alt="HTML">
-        <div>
-          <h3>HTML</h3>
-          <p>Hypertext Markup Language</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="css.png" alt="CSS">
-        <div>
-          <h3>CSS</h3>
-          <p>Cascading Style Sheets</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="jss.png" alt="JavaScript">
-        <div>
-          <h3>JavaScript</h3>
-          <p>Programming Language</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="react.png" alt="React">
-        <div>
-          <h3>React</h3>
-          <p>React.js</p>
-        </div>
-      </div>
+    <div class="skill-cards">
+      <div class="skill-card"><img src="HTML.png" alt="HTML" /><div><h3>HTML</h3><p>HyperText Markup Language</p></div></div>
+      <div class="skill-card"><img src="css.png" alt="CSS" /><div><h3>CSS</h3><p>Cascading Style Sheets</p></div></div>
+      <div class="skill-card"><img src="jss.png" alt="JavaScript" /><div><h3>JavaScript</h3><p>Interactive Web Development</p></div></div>
+      <div class="skill-card"><img src="react.png" alt="React" /><div><h3>React</h3><p>React JS Library</p></div></div>
     </div>
-  </section>  <section class="projects" id="projects">
+  </section>  <!-- Projects Section -->  <section id="projects">
     <h2>My Projects</h2>
     <div class="project">
       <h3>Calculator App</h3>
@@ -89,23 +63,24 @@
       <p>A basic task management app to add, complete, and delete daily tasks. Made using HTML, CSS, and JavaScript.</p>
       <a href="https://github.com/lohreddyk/todo-list" target="_blank">🔗 View on GitHub</a>
     </div>
-  </section>  <section class="socials" id="socials">
+  </section>  <!-- Social Section -->  <section id="socials">
     <h2>Socials</h2>
     <p>Here you can connect with me on my social media</p>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/in/k-lohith-kumar-bbb8782a0" target="_blank"><img src="LinkedIn.png" alt="LinkedIn"></a>
-      <a href="https://github.com/lohreddyk" target="_blank"><img src="github.png" alt="GitHub"></a>
-      <a href="https://www.instagram.com/loh_reddy_k?igsh=MTFuczZkNWlrYWgxaA==" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/k-lohith-kumar-bbb8782a0" target="_blank"><img src="LinkedIn.png" alt="LinkedIn" /></a>
+      <a href="https://github.com/lohreddyk" target="_blank"><img src="github.png" alt="GitHub" /></a>
+      <a href="https://www.instagram.com/loh_reddy_k?igsh=MTFuczZkNWlrYWgxaA==" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
     </div>
-  </section>  <section class="contact" id="contact">
+  </section>  <!-- Contact Section -->  <section id="contact">
     <h2>Contact</h2>
     <p>Feel free to contact me</p>
-    <form action="mailto:klohithkumar2005@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email or Phone" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" onclick="window.location.href='mailto:klohithkumar2005@gmail.com'">Submit</button>
     </form>
-  </section>
-</body>
-</html>
+  </section>  <footer>
+    <p>© 2025 K Lohith Kumar. All rights reserved.</p>
+  </footer>
+</body></html>
