@@ -1,109 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K Lohith Kumar - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="container header-container">
-      <div class="logo">LK</div>
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Hello. I'm Lohith. 👋</h1>
+<body>  <!-- Navigation Bar -->  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <!-- Hero Section -->  <section id="hero" class="section hero reveal">
+    <h1>Hello, I'm <span>Lohith</span></h1>
     <p>A Web Developer from Bengaluru</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="card">
+    <a href="#projects" class="btn">See My Work</a>
+    <a class="btn download-btn" href="K_Lohith_Kumar_Resume.pdf" download>📄 Download Resume</a>
+  </section>  <!-- About Section -->  <section id="about" class="section reveal">
     <h2>About Me</h2>
     <p>
-      I'm K Lohith Kumar, a passionate and curious learner from a computer science background. 
-      I love building simple, responsive websites that solve real problems. I stay consistent, enjoy learning new technologies,
-      and improve my skills by working on real-world projects.
+      I'm K Lohith Kumar, a passionate and curious learner with a computer science background.
+      I love crafting clean and responsive websites, exploring new web technologies, and learning by building.
     </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="card">
+  </section>  <!-- Skills Section -->  <section id="skills" class="section reveal">
     <h2>Skills</h2>
-    <ul class="pill-list">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-
-  <!-- Latest Projects -->
-  <section id="projects">
-    <h2>Latest Content</h2>
-    <div class="project-grid">
-
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+    </div>
+  </section>  <!-- Projects Section -->  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+    <div class="project-cards">
       <div class="project-card">
         <h3>Calculator App</h3>
-        <p>A basic calculator app built with HTML, CSS, and JavaScript.</p>
-        <a href="https://github.com/lohreddyk/calculator" target="_blank">Read More →</a>
+        <p>A basic calculator using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/lohreddyk/calculator" target="_blank">View Project</a>
       </div>
-
       <div class="project-card">
         <h3>To-Do List App</h3>
-        <p>A task manager that helps organize daily tasks with clean UI.</p>
-        <a href="https://github.com/lohreddyk/todo-list" target="_blank">Read More →</a>
+        <p>A daily task manager app to add, complete and delete tasks.</p>
+        <a href="https://github.com/lohreddyk/todo-list" target="_blank">View Project</a>
       </div>
-
-      <div class="project-card">
-        <h3>More Coming Soon...</h3>
-        <p>Stay tuned! I'm working on more cool stuff to share here.</p>
-        <a href="#">Follow Me →</a>
-      </div>
-
     </div>
-  </section>
-
-  <!-- Activity Section -->
-  <section class="card">
-    <h2>Weekly Activity</h2>
-    <div class="activity-log">
-      ✅ Finished this portfolio website  
-      ✅ Updated GitHub projects  
-      ✅ Practicing JavaScript & CSS Grid
-    </div>
-  </section>
-
-  <!-- Newsletter Section -->
-  <section class="newsletter">
-    <h2>Get My Latest Content</h2>
-    <p>No spam. Just my best work, projects, and insights.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" />
-      <button type="submit">Subscribe to Newsletter</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="mailto:klohithkumar2005@gmail.com">Email</a>
-      <a href="https://github.com/lohreddyk">GitHub</a>
-      <a href="https://linkedin.com/in/k-lohith-kumar-bbb8782a0">LinkedIn</a>
-    </div>
-    <p>© 2025 K Lohith Kumar</p>
-  </footer>
-
-</body>
+  </section>  <!-- Contact Section -->  <section id="contact" class="section reveal">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:klohithkumar2005@gmail.com">klohithkumar2005@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918217780676">+91 8217780676</a></p>
+    <p>
+      <a href="https://github.com/lohreddyk" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/k-lohith-kumar-bbb8782a0" target="_blank">LinkedIn</a>
+    </p>
+  </section>  <!-- Footer -->  <footer>
+    <p>&copy; 2025 K Lohith Kumar. All rights reserved.</p>
+  </footer>  <script src="script.js"></script></body>
 </html>
