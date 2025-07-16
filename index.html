@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K Lohith Kumar - Portfolio</title>
+  <title>K Lohith Kumar Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
 
   <header class="navbar">
-    <div class="logo">
-      <img src="lk.png" alt="Logo" />
-    </div>
+    <div class="logo"><img src="lk.png" alt="Logo" /></div>
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -22,61 +19,37 @@
       </ul>
     </nav>
     <div class="top-buttons">
-      <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
+      <a href="#contact" class="contact-btn">Contact</a>
     </div>
   </header>
 
   <section class="hero" id="home">
-    <h2>Hello,</h2>
-    <h1>I'm <span class="highlight">K LOHITH KUMAR</span></h1>
-    <h2><span id="rotate-text">Student</span></h2>
+    <h1>Hello,</h1>
+    <h2>I'm <span class="highlight">K LOHITH KUMAR</span></h2>
+    <h2 id="rotate-text">Student</h2>
     <div class="hero-buttons">
+      <a href="K_Lohith_Kumar_Resume.pdf" class="btn" id="resumeBtn" download>Download Resume</a>
       <a href="#projects" class="btn">See My Work</a>
-      <a href="K_Lohith_Kumar_Resume.pdf" download class="btn" id="resumeBtn">Download Resume</a>
     </div>
   </section>
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <p class="about-text">
-      Passionate web developer with a curiosity to explore. I enjoy building responsive websites and learning new technologies.
+      Passionate CSE student and web enthusiast, eager to build real-world projects.
     </p>
   </section>
 
   <section id="skills">
     <h2 class="section-title">Skills</h2>
     <p class="skills-intro">
-      I build responsive and user-friendly websites using modern web technologies.
+      I create responsive websites using HTML, CSS, JavaScript, and React.
     </p>
     <div class="skill-cards">
-      <div class="skill-card">
-        <img src="HTML.png" alt="HTML" />
-        <div>
-          <h3>HTML</h3>
-          <p>HyperText Markup Language</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="css.png" alt="CSS" />
-        <div>
-          <h3>CSS</h3>
-          <p>Cascading Style Sheets</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="jss.png" alt="JavaScript" />
-        <div>
-          <h3>JavaScript</h3>
-          <p>Scripting for interactivity</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <img src="react.png" alt="React" />
-        <div>
-          <h3>React</h3>
-          <p>JavaScript UI Library</p>
-        </div>
-      </div>
+      <div class="skill-card"><img src="HTML.png" /><div><h3>HTML</h3><p>HyperText Markup Language</p></div></div>
+      <div class="skill-card"><img src="css.png" /><div><h3>CSS</h3><p>Cascading Style Sheets</p></div></div>
+      <div class="skill-card"><img src="jss.png" /><div><h3>JavaScript</h3><p>Programming the Web</p></div></div>
+      <div class="skill-card"><img src="react.png" /><div><h3>React</h3><p>Modern JS Library</p></div></div>
     </div>
   </section>
 
@@ -84,13 +57,13 @@
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
       <div class="project">
-        <h3>Calculator App</h3>
-        <p>A basic calculator performing arithmetic operations.</p>
+        <h3>Calculator</h3>
+        <p>Simple calculator for basic math operations.</p>
         <a href="https://github.com/lohreddyk/calculator" target="_blank">View on GitHub</a>
       </div>
       <div class="project">
-        <h3>To-Do List App</h3>
-        <p>A simple task tracker with add/delete functionality.</p>
+        <h3>To-Do List</h3>
+        <p>Manage your daily tasks with this To-Do app.</p>
         <a href="https://github.com/lohreddyk/todo-list" target="_blank">View on GitHub</a>
       </div>
     </div>
@@ -98,17 +71,11 @@
 
   <section id="socials">
     <h2 class="section-title">Socials</h2>
-    <p class="section-subtext">Connect with me on social media</p>
+    <p class="section-subtext">Here you can connect with me on my social media</p>
     <div class="social-icons">
-      <a href="https://github.com/lohreddyk" target="_blank">
-        <img src="github.png" alt="GitHub" />
-      </a>
-      <a href="https://www.instagram.com/loh_reddy_k?igsh=MTFuczZkNWlrYWgxaA==" target="_blank">
-        <img src="instagram.png" alt="Instagram" />
-      </a>
-      <a href="https://linkedin.com/in/k-lohith-kumar-bbb8782a0" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn" />
-      </a>
+      <a href="https://github.com/lohreddyk" target="_blank"><img src="github.png" /></a>
+      <a href="https://www.linkedin.com/in/k-lohith-kumar-bbb8782a0" target="_blank"><img src="linkedin.png" /></a>
+      <a href="https://www.instagram.com/loh_reddy_k?igsh=MTFuczZkNWlrYWgxaA==" target="_blank"><img src="instagram.png" /></a>
     </div>
   </section>
 
@@ -116,16 +83,17 @@
     <h2 class="section-title">Contact</h2>
     <p class="section-subtext">Feel free to contact</p>
     <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="text" placeholder="Your Phone / Email" required />
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Phone/Email" />
       <textarea rows="4" placeholder="Your Answer"></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
 
   <footer>
-    <p>Thanks for visiting my portfolio!</p>
+    <p>Thank you for visiting my portfolio!</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
