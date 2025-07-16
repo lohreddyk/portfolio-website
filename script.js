@@ -1,20 +1,16 @@
 // === script.js ===
 
-// Rotating Text Logic const words = ["Student", "Web Developer", "Frontend Enthusiast"]; let index = 0; const textSpan = document.getElementById("rotate-text");
+// Rotating text const rotateText = document.getElementById("rotate-text"); const words = ["Student", "Web Developer", "Frontend Enthusiast"]; let wordIndex = 0;
 
-function rotateWord() { textSpan.textContent = words[index]; index = (index + 1) % words.length; } setInterval(rotateWord, 2000);
+function updateText() { rotateText.textContent = words[wordIndex]; wordIndex = (wordIndex + 1) % words.length; } setInterval(updateText, 2000);
 
-// Resume Download Alert const resumeBtn = document.getElementById("resumeBtn"); resumeBtn.addEventListener("click", () => { alert("📄 Your resume is downloading..."); });
+// Resume alert const resumeBtn = document.getElementById("resumeBtn"); resumeBtn.addEventListener("click", () => { alert("📄 Your resume is downloading..."); });
 
-// Navbar Active Highlight on Scroll const sections = document.querySelectorAll("section"); const navLinks = document.querySelectorAll(".nav-links a");
+// Active link highlight on scroll const sections = document.querySelectorAll("section"); const navLinks = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => { let currentSection = ""; sections.forEach(section => { const sectionTop = section.offsetTop - 100; if (pageYOffset >= sectionTop) { currentSection = section.getAttribute("id"); } });
+window.addEventListener("scroll", () => { let current = ""; sections.forEach(section => { const top = window.scrollY; const offset = section.offsetTop - 80; const height = section.offsetHeight; if (top >= offset && top < offset + height) { current = section.getAttribute("id"); } }); navLinks.forEach(link => { link.classList.remove("active"); if (link.getAttribute("href").includes(current)) { link.classList.add("active"); } }); });
 
-navLinks.forEach(link => { link.classList.remove("active"); if (link.getAttribute("href").includes(currentSection)) { link.classList.add("active"); } }); });
+// Dark mode toggle const modeToggle = document.getElementById("modeToggle"); modeToggle.addEventListener("click", () => { document.body.classList.toggle("light-mode"); if (document.body.classList.contains("light-mode")) { modeToggle.textContent = "☀️"; } else { modeToggle.textContent = "🌙"; } });
 
-// Dark Mode Default + Toggle const darkToggle = document.getElementById("darkToggle"); const body = document.body;
-
-// Default to dark mode on load window.addEventListener("DOMContentLoaded", () => { body.classList.add("dark-mode"); });
-
-darkToggle.addEventListener("click", () => { body.classList.toggle("dark-mode"); });
+// Default to dark mode window.addEventListener("DOMContentLoaded", () => { document.body.classList.remove("light-mode"); modeToggle.textContent = "🌙"; });
 
