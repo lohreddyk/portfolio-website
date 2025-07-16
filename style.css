@@ -19,7 +19,6 @@ body {
   font-size: var(--small);
 }
 
-/* Global section styling with scroll animation */
 section {
   padding: 4rem 1rem;
   margin: 4rem 0;
@@ -35,7 +34,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -92,7 +90,6 @@ section.visible {
   font-size: 0.75rem;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -130,7 +127,6 @@ section.visible {
   font-weight: bold;
 }
 
-/* Section titles */
 .section-title {
   text-align: center;
   font-size: 1.2rem;
@@ -144,7 +140,6 @@ section.visible {
   margin-bottom: 2rem;
 }
 
-/* About Me */
 .about-text {
   text-align: center;
   padding: 0 1rem;
@@ -153,7 +148,6 @@ section.visible {
   font-size: 0.8rem;
 }
 
-/* Skills */
 .skills-intro {
   text-align: center;
   font-size: 0.75rem;
@@ -195,13 +189,11 @@ section.visible {
   color: var(--light-text);
 }
 
-/* Projects */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .project {
@@ -209,6 +201,7 @@ section.visible {
   padding: 1rem;
   border-radius: var(--radius);
   font-size: 0.8rem;
+  width: 300px;
 }
 
 .project a {
@@ -217,7 +210,6 @@ section.visible {
   font-size: 0.75rem;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -234,7 +226,6 @@ section.visible {
   transform: scale(1.1);
 }
 
-/* Contact Form */
 #contact form {
   display: flex;
   flex-direction: column;
@@ -266,7 +257,6 @@ section.visible {
   font-size: 0.75rem;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
