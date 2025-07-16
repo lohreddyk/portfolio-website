@@ -1,4 +1,3 @@
-// Rotating text
 const rotateText = document.getElementById("rotate-text");
 const words = ["Student", "Web Developer", "Frontend Enthusiast"];
 let wordIndex = 0;
@@ -9,30 +8,18 @@ function updateText() {
 }
 setInterval(updateText, 2000);
 
-// Resume alert
-const resumeBtn = document.getElementById("resumeBtn");
-resumeBtn.addEventListener("click", () => {
+// Resume download notification
+document.getElementById("resumeBtn").addEventListener("click", () => {
   alert("📄 Your resume is downloading...");
 });
 
-// Active link highlight on scroll
+// Scroll animation
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
-
 window.addEventListener("scroll", () => {
-  let current = "";
   sections.forEach(section => {
-    const top = window.scrollY;
-    const offset = section.offsetTop - 80;
-    const height = section.offsetHeight;
-    if (top >= offset && top < offset + height) {
-      current = section.getAttribute("id");
-    }
-  });
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight - 100) {
+      section.classList.add("visible");
     }
   });
 });
