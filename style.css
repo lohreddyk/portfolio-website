@@ -1,6 +1,6 @@
 /* === Global Variables === */ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-:root { --primary: #f1c40f; --background: #121212; /* dark mode base / --header-bg: #000;  / pure black header */ --text: #fff; --light-text: #ccc; --card-bg: #1e1e1e; --radius: 10px; --spacing: 2rem; --small: 0.85rem; }
+:root { --primary: #f1c40f; --background: #1a1a1a; /* Updated to dark grey / --header-bg: #000;  / pure black header / --text: #fff; --light-text: #ccc; --card-bg: #222; / slightly lighter for cards */ --radius: 10px; --spacing: 2rem; --small: 0.85rem; }
 
 /* === Global Reset === */ body { margin: 0; font-family: 'Inter', sans-serif; background: var(--background); color: var(--text); font-size: var(--small); }
 
