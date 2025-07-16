@@ -1,25 +1,27 @@
 const rotateText = document.getElementById("rotate-text");
 const words = ["Student", "Web Developer", "Frontend Enthusiast"];
 let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-function updateText() {
-  rotateText.textContent = words[wordIndex];
-  wordIndex = (wordIndex + 1) % words.length;
-}
-setInterval(updateText, 2000);
+function typeEffect() {
+  const currentWord = words[wordIndex];
+  const displayText = currentWord.slice(0, charIndex);
+  rotateText.textContent = displayText;
 
-// Resume download notification
-document.getElementById("resumeBtn").addEventListener("click", () => {
-  alert("📄 Your resume is downloading...");
-});
-
-// Scroll animation
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= window.innerHeight - 100) {
-      section.classList.add("visible");
+  if (!isDeleting && charIndex < currentWord.length) {
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(typeEffect, 50);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) {
+      wordIndex = (wordIndex + 1) % words.length;
     }
-  });
-});
+    setTimeout(typeEffect, 1000);
+  }
+}
+
+typeEffect();
