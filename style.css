@@ -20,8 +20,10 @@ body {
   font-size: var(--small);
 }
 
+/* Long gaps between sections + scroll animation */
 section {
-  padding: var(--spacing) 1rem;
+  padding: 4rem 1rem;
+  margin: 4rem 0;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
